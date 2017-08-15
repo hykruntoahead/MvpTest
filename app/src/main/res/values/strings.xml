@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MvpTest</string>
+    <string name="saved">已保存</string>
+    <string name="loaded">已加载</string>
 </resources>

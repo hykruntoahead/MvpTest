@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.heyukun.mvptest.R;
 import com.example.heyukun.mvptest.presenter.UserPresenter;
@@ -44,9 +45,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         switch (v.getId()){
             case R.id.button_save:
                 mUserPresenter.saveUser(getID(),getFirstName(),getLastName());
+                Toast.makeText(this,R.string.saved,Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_load:
                 mUserPresenter.loadUser(getID());
+                Toast.makeText(this,R.string.loaded,Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
